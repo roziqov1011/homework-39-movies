@@ -8,7 +8,7 @@ var createMoviesElement = function (movie){
 
     elNewMovie.querySelector(".movies__img").src ="https://www.youtube.com/embed/"+movie.ytid;
     elNewMovie.querySelector(".movies__title").textContent = movie.Title;
-    elNewMovie.querySelector(".movies__categories").textContent = movie.Categories;
+    elNewMovie.querySelector(".movies__categories").textContent = movie.Categories.split('|').join(', ');
     elNewMovie.querySelector(".movies__id").href ="https://www.youtube.com/watch?v="+ movie.ytid;
     elNewMovie.querySelector(".movies__id").target = "_blank";
     return elNewMovie;
